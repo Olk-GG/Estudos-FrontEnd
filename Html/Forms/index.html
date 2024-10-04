@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Nessa aula serão abordadas as tags "form, input (e seus tipos), checkbox e radio, button (e seus tipos),select(e seus tipos) e textarea." -->
+
+    <h2>Formulário de Cadastro</h2>
+    <form name="singup" action="#" method="post" target="_blank " onsubmit="alert('Formulario enviado')">
+        <!--action direciona para onde esses dados irão "url do servidor"-->
+        <!--method, sera a forma que os dados serão enviados. post (é o mais seguro não envia através da url) get (menos seguro, envia através da url) Resumindo Https e Http-->
+        <!--tags "on" são tags de eventos. Exemplo "onclick" sera ultilizada para linkar um evento Js ao evento, outro onsubimit="alert" cria um alerta após o envio.-->
+        Nome: <input type="text" name="name" id=""><br>
+        Idade: <input type="number" name="age" id=""><br>
+        Senha: <input type="password" name="password" id=""><br>
+        <br>
+        <button type="submit">Enviar</button><br>
+        <button type="reset">Resetar</button>
+    </form>
+    <br>
+    <!--Aula sobre input-->
+    <h2>"Input"</h2>
+    <p><sub><strong><i>Diferentes tipos de input</i></strong></sub></p>
+    <form>
+        <label>Text: </label><input type="text"> <br>
+        <label>Number: </label><input type="number" min="0" max="100" step="5"> <br>
+        <label>Range: </label><input type="range" min="0" max="100" step="5" value="10"> <br>
+        <label>Date: </label><input type="date"><br>
+        <label>Week: </label><input type="week"><br>
+        <label>Month: </label><input type="month"><br>
+        <label>Color: </label><input type="color"><br>
+        <label>Email: </label><input type="email"><br>
+        <label>Url: </label> <input type="url"><br>
+        <label>Hidden: </label><input type="hidden"><br> <!--Campo invisil, porém é enviado junto-->
+        <label>File: </label><input type="file" multiple><br> <!--Envia arquivos-->
+        <label>Search: </label><input type="search"><br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset" onclick="alert('Resetado')">Resetar</button>
+    </form>
+    <br>
+    <!--Aula checkbox e radio button-->
+    <h2>Checkbox e Radio</h2>
+    <p><sub><strong><i>Exemplo em Cardapio</i></strong></sub></p>
+    <form method="get" onsubmit="">
+        <h3>Sabor da Pizza?</h3>
+        <input type="checkbox" name="Sabor[]" value="Calabreza"> Calabreza<br>
+        <input type="checkbox" disabled name="Sabor[]" value="Peperoni"> Peperoni <br>
+        <input type="checkbox" name="Sabor[]" value="Mussarela"> Mussarela<br>
+        <input type="checkbox" name="Sabor[]" value="Portuguesa"> Portuguesa<br>
+        <h3>Bebida</h3>
+        <input type="radio" name="Bebida" value="Coca-cola"> Coca-cola <br>
+        <input type="radio" name="Bebida" value="Guaraná"> Guaraná <br>
+        <input type="radio" name="Bebida" value="Água"> Água <br>
+        <br>
+        <button type="submit">Finalizar Pedido</button>
+    </form>
+    <!--Aula sobre button e seus tipos-->
+    <h2>Botões</h2>
+    <form method="get" onsubmit="">
+        <!--a tag onsubmit (JS) pode ser utilizada para validar seu formulario antes de enviar-->
+        <button type="button">Clicavel</button><br> <!--Botão tratavel apenas com js-->
+        <button type="submit">submit</button>
+    </form>
+
+    <h2>Select e seus tipos</h2>
+    <!--Aula sobre select e seus tipos-->
+    <p><sub><strong><i>Exemplo em Cardapio</i></strong></sub></p>
+
+    <form method="get">
+        <label for="Pizza">Sabor da Pizza: </label>
+        <select name="sabores_pizzas">
+            <option value="" selected></option>
+            <option value="Calabreza">Calabreza</option>
+            <option value="Mussarela">Mussarela</option>
+            <option value="Peperoni">Peperoni</option>
+            <option value="Portuguesa">Portuguesa</option>
+        </select><br>
+
+        <label for="Adicionais">Selecione Adicionais: </label>
+        <select name="Adicionais">
+            <option value="Cebola">Cebola</option>
+            <option value="Queijo">Queijo</option>
+            <option value="Nenhum" selected>Nenhum</option>
+        </select><br>
+
+        <label for="Bebida">Selecione Sua Bebida: </label>
+        <select name="Bebida">
+            <option value="Coca-cola">Coca-cola</option>
+            <option value="Guaraná">Guaraná</option>
+            <option value="Água" disabled>Água</option>
+            <option value="Nenhum" selected>Nenhum</option>
+        </select><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Textarea</h2>
+    <!--Aula sobre textarea-->
+    <p><sub><strong><i>Exemplo em comentarios de feedback</i></strong></sub></p>
+    <form method="get">
+        <label for="feedback">Digite seu feedback:</label>
+        <textarea name="feedback" rows="2" cols="15"></textarea>
+        <!--Subtag rows (difine as linhas) e cols (define colunas)-->
+        <button type="submit">Enviar</button>
+        <button type="reset">Resetar</button>
+    </form>
+
+</body>
+
+</html>

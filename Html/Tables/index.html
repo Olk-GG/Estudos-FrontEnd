@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabahando com Tabelas</title>
+    <style>
+        table thead {
+            border: solid 1px #555;
+            background-color: aqua;
+        }
+
+        table tr:hover td {
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+        
+        table tbody {
+            background-color: #55555523;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Trabalhando com Tabelas</h1>
+
+    <table summary="Tabela de Planos" width="250px" border="8" align="center" cellspacing="1" cellpadding="15">
+        <!--tr - cria novas linhas-->
+        <!--td - adiciona novas colunas a linha-->
+        <!--th - adiciona uma celula de cabeçalho a linha -->
+        <!--tbody - organização, engloba o corpo da tabela-->
+        <!--thead - organização, engloba o cabeçalho-->
+        <!--tfoot - organização, engloba rodapé-->
+        <thead>
+            <tr>
+                <th title="Planos Disponiveis">Plano</th>
+                <th title="Valores">Valor</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Inicial</td>
+                <td>R$</td>
+            </tr>
+            <tr>
+                <td>Intermediario</td>
+                <td>R$$</td>
+            </tr>
+            <tr>
+                <td>Avançado</td>
+                <td>R$$$</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

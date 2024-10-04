@@ -1,0 +1,49 @@
+body {
+    background-color: rgba(128, 128, 128, 0.363);
+}
+
+main {
+    background-color: rgba(107, 107, 255, 0.055);
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: green;
+}
+
+article {
+    display: inline-block;
+}
+
+article q {
+    font-style: italic;
+}
+
+blockquote {
+    background-color: lightgrey;
+    padding: 10px;
+    margin-left: 0;
+    border-left: rgba(255, 0, 0, 0.76) solid 5px;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    padding: 10px 30px;
+    text-decoration: none;
+    color: blue;
+    background-color: rgba(0, 0, 0, 0.055);
+
+}
+
+nav ul li a:hover {
+    background-color: rgb(17, 0, 255);
+    color: rgb(255, 255, 255);
+}

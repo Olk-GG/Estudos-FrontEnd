@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação e Estrutura HTML</title>
+    <style>
+        div.formulario {
+            margin: 5px;
+            width: 300px;
+        }
+
+        fieldset {
+            background-color: aquamarine;
+            width: 300px;
+            border-radius: 10px;
+            border-color: rgb(0, 0, 0);
+        }
+
+        label {
+            margin: 10px;
+            text-align: right;
+            display: inline-block;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formatando Textos HTML</h1>
+    <p>Para a formatação de textos html, usa-se diversas tags, sendo as mais comuns:</p>
+    <ul>
+        <li><b>&lt;b&gt;:</b> Torna seu texto em negrito;</li>
+        <li><b>&lt;strong&gt;:</b> Torna o texto em negrito, porém é utilizado quando se quer dar mais enfase em partes do texto (visualmente é igual a tag &lt;b&gt;);</li>
+        <li><b>&lt;i&gt;:</b> Essa tag torna pate do texto em <i>italico</i>;</li>
+        <li><b>&lt;mark&gt;:</b> Marca parte do <mark>texto</mark>;</li>
+        <li><b>&lt;u&gt;:</b> Sublinha parte do <u>texto</u>;</li>
+        <li><b>&lt;s&gt;:</b> Grifa parte do <s>texto</s>;</li>
+        <li><b>&lt;p&gt;:</b> Cria novos paragrafos;</li>
+        <li><b>&lt;blockquote&gt;:</b> Usada comumente para citações;</li>
+        <li><b>&lt;sup&gt;:</b> Faz com que apareça meio caractere acima da linha normal <sup>exemplo</sup>;</li>
+        <li><b>&lt;sub&gt;:</b> Faz com que apareça meio caractere abaixo da linha normal <sub>exemplo</sub>;</li>
+        <li><b>&lt;h<sup>x</sup>&gt;:</b> Cria títulos ;</li>
+        <li><b>&lt;small&gt;:</b> Deixa parte do texto <small>pequeno</small>;</li>
+    </ul>
+    <h2>Estrutura HTMl</h2>
+    <h3>Tag &lt;div&gt;</h3>
+    <p>A tag div é utilizada para <strong><u>definir seções e divisões dentro de um pagina html</u></strong>, ou seja
+        ela é um container que podem ser estilizados com CSS ou manipulados com JavaScript.</p>
+    <h3>Tag span</h3>
+    <p>A tag &lt;span&gt; é um <strong><u>contêiner embutido </u></strong> usado para marcar uma parte de um texto ou
+        uma parte de um documento, pode ser facilmente estilizada por CSS ou manipulada com JavaScript usando o atributo
+        class ou id. </p>
+    <h3>Tag fieldset</h3>
+    <p>A tag é usada para agrupar elementos relacionados em um formulário. Ela desenha uma caixa ao redor dos elementos
+        relacionados.</p>
+    <p>Juntamente com a tag fieldset, usa-se a tag <strong>&lt;legend&gt;</strong> para se adicionar um título. </p>
+    <div class="formulario">
+        <form method="get">
+            <Fieldset>
+                <legend><mark>Formulário de Cadastro</mark></legend>
+                <label for="name">Nome: </label><input type="text" name="name"><br>
+                <label for="email">Email: </label><input type="email" name="email"><br>
+                <label for="password">Senha: </label><input type="password" name="password"><br>
+                <div style="margin: 10px;">
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </Fieldset>
+        </form>
+    </div>
+    <h3>Tag iframe</h3>
+    <p>A tag iframe é utilizada para criar um quadro embutido, comumente usado para incorporar outro documento dentro do
+        documento HTML atual. Como janelas que apresentão conteude de sites externos.</p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41374.839136196795!2d-46.65929843102212!3d-23.566516001549264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59f1069d11d1%3A0xcb936109af9ce541!2sParque%20Ibirapuera!5e0!3m2!1spt-BR!2sbr!4v1726010303770!5m2!1spt-BR!2sbr"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+</html>

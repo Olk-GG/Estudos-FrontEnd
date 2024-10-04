@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos especiais</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        kbd {
+            border: 1px solid black;
+        }
+
+        .code code {
+            background-color: rgb(127, 255, 212);
+            color: rgb(47, 0, 255);
+        }
+
+        .pre pre {
+            background-color: #f1f1f1;
+            color: red;
+        }
+
+        .pre pre p {
+            color: grey;
+        }
+
+        .details_summary code {
+            background-color: #f1f1f1;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div> <!--Aula sobre datalist-->
+
+        <input list="browsers" name="search" placeholder="Pesquisar...">
+
+        <datalist id="browsers">
+            <option>Google chrome</option>
+            <option>Mozila firefox</option>
+            <option>Opera</option>
+            <option>Microsoft edge</option>
+            <option>Safari</option>
+        </datalist>
+
+        <select name="browsers" id="">
+            <option value="">Escolha um navegador</option>
+            <option value="chrome">Google chrome</option>
+            <option value="firefox">Mozila firefox</option>
+            <option value="opera">Opera</option>
+            <option value="edge"> Microsoft edge</option>
+        </select>
+    </div>
+    <hr>
+    <div> <!--Aula sobre (kdb, pre, code)-->
+        <div class="kbd">
+            <p>Copie esta informação com <kbd>CTRL</kbd> + <kbd>C</kbd> </p>
+            <!--kbd é utilziada para indicar que o texto é referente a uma tecla-->
+        </div>
+
+        <div class="code">
+            <p>Para trocar o fundo do elemento utilize o comando <code>background-color</code></p>
+            <!--code é utlizado para indicar que o texto é referente a um comando-->
+        </div>
+        <div class="pre">
+            <p>Siga o exemplo do comandos:</p>
+            <pre>
+                <p>// Assim se utilzia  o comando</p>
+                <code>
+                code{
+                    background-color: rgb(127, 255, 212);
+                }
+                </code>
+            </pre>
+            <!--pre é utilizado para citar o código-->
+        </div>
+    </div>
+    <hr>
+    <div class="details_summary"> <!--Aula sobre details e summary-->
+        <details>
+            <summary>Como crio um espaçamento a esquerda?</summary>
+            <p>Utiliza-se o comando <code>margin-left</code> no CSS</p>
+        </details>
+        <!--As duas tags são utilizadas em conjunto, para criar uma descrição que pode ser aberta ou fechada-->
+    </div>
+    <hr>
+    <div class="meter_progress"> <!--Aula sobre meter e progress-->
+        <meter max="100" min="0" value="25"></meter>
+
+        <progress id="progress" max="100" min="0" value=""></progress>
+        <script>
+            var progress = document.getElementById('progress');
+            const interval = setInterval(() => {
+                progress.value += 25;
+                if (progress.value >= 100) {
+                    clearInterval(interval);
+                }
+            }, 1000)
+        </script>
+        <!--A diferença entre os dois:
+        meter é utilizado como um medidor (como espaço de um HD)
+        progress é utilizado como um progresso (download por exemplo)-->
+    </div>
+    <hr>
+    <div> <!--Aula sobre mark e javascript-->
+        <input type="text" id="busca">
+
+        <p id="descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolorem autem iure
+            laudantium culpa veniam
+            atque omnis commodi temporibus libero repudiandae voluptate possimus dolores vitae, repellat cum quas
+            ducimus modi.
+        </p>
+        <script>
+            var searchfield = document.getElementById('busca');
+            var descriptionobject = document.getElementById('descricao');
+            var textToSearche = descriptionobject.innerHTML;
+
+            function buscar(busca) {
+                const regex = new RegExp(`(${busca})(?!(.(?!<mark))*</mark>)+`, 'ig');
+                const ocurrences = textToSearche.match(regex);
+                descriptionobject.innerHTML = textToSearche.replace(regex, `<mark>${busca}</mark>`);
+            }
+
+            searchfield.addEventListener('keyup', (e) => buscar(e.target.value));
+        </script>
+    </div>
+    <hr>
+    <div> <!--Aula sobre canvas-->
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0)
+            ctx.lineTo(200, 100)
+            ctx.stroke();
+        </script>
+    </div>
+
+</body>
+
+</html>

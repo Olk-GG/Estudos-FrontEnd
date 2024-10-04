@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Artigo X</a></li>
+                <li><a href="#">Artigo Y</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section></section>
+        <!--section é uma sessão do conteudo-->
+        <article>
+            <!--Artigo dentro da pag,conteúdo independente e autocontido-->
+            <p>Artigo publicado em: <time datetime="29/09/2024">29/09/2024</time></p>
+            <p><q cite="fonte da citação">Lorem ipsum</q>dolor sit amet consectetur adipisicing elit. Qui expedita
+                magnam culpa distinctio nam sit
+                aut assumenda dolor labore error eveniet ratione, tempore et iste molestiae dolores! Saepe, totam
+                rerum?
+            </p>
+            <!--q citação sem quebra de linha e recuo-->
+            <blockquote cite="link fonte da citação"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                A eius iusto voluptas! Recusandae eum quasi minima voluptate odit omnis dolor veritatis obcaecati
+                possimus, atque deleniti corrupti odio architecto, ea voluptatem.
+            </blockquote>
+            <!--blockquot citação-->
+        </article>
+        <aside>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, quia. Pariatur culpa amet suscipit
+                tenetur cumque vel minus quasi deserunt similique repellat, porro quisquam, molestiae qui quod! Earum,
+                maxime exercitationem?
+            </p>
+        </aside>
+        <!--aside é um assunto fora do principal tema da página, ou levemente relacionado "conteudo menos relevante"-->
+        <figure>
+            <img src="" alt="Imagem de exemplo">
+            <figcaption>Legenda da imagem</figcaption>
+        </figure>
+        <!--figure é um container, usado para "agrupar mídias e texto em um unico contexto", como ilustrações, diagramas, fotos, listagens de códigos, etc.-->
+        <picture>
+            <img src="" alt="imagem princiapl">
+            <source srcset="imagem secundaria (A) de a cordo com o dispositivo" media="(max-width: 600px)">
+            <source srcset="imagem secundaria (B) de a cordo com o dispositivo" media="(max-width: 300px)">
+        </picture>
+        <!--picture, várias imagens podem ser projetadas para preencher melhor a viewport do navegador.-->
+
+    </main>
+    <footer>
+        <address>Rua x n: Y</address>
+    </footer>
+</body>
+
+</html>
