@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="seletores">
+        <fieldset>
+            <h1>Seletores CSS</h1>
+            <div>
+                <ul>
+                    <li><b>Seletor por tipo: </b>Busaca elementos por uma tag HTML especifica</li>
+                    <li><b>Seletor por ID <i>(#): </i></b>Busca elementos através do atributo "id"</li>
+                    <li><b>Seletor por Classe (.): </b>Busca elementos através do atributo "class"</li>
+                    <li><b>Seletor Universal: (*): </b>Seleciona todos os elementos HTML</li>
+                    <li><b>Seletor de Atributo ([atrib]): </b>Seleciona elementos que possuem um atributo especifico em
+                        nosso documento HTML e conseguimos também buscas atributos com um valor especifico.</li>
+                </ul>
+                <pre>
+                    <p>Exemplos:</p>
+                    <code>
+                    <p title="Seletor-tipo">Seletor por tipo:</p>
+                    h1 {
+                        color:red
+                        background-color:#f1f1f1;
+                    }
+                    <hr>
+                    <p title="Seletor-ID">Seletor por ID:</p>
+                    #titulo-pincipal {
+                        color:red
+                        background-color:#f1f1f1;
+                    }
+                    <hr>
+                    <p title="Seletor-class">Seletor por class:</p>
+                    .tabela-horas {
+                        color:red
+                        background-color:#f1f1f1;
+                    }
+                    <hr>
+                    <p title="Seletor-Universal">Seletor Universal:</p>
+                    * {
+                        color:red
+                        background-color:#f1f1f1;
+                    }
+                    <hr>
+                    <p title="Seletor-Atributo">Seletor de Atributo:</p>
+                    [title] {
+                        color:red;
+                        background-color:#f1f1f1;
+                    }
+
+                    ou
+
+                    [title="seletor-atributo"] {
+                        color:red;
+                        background-color:#f1f1f1;
+                    }
+                
+                    </code>
+                </pre>
+            </div>
+        </fieldset>
+    <div class="combinadores">
+        <fieldset class="agrupando-seletores">
+            <h1>Agrupando Seletores</h1>
+            <p>Podemos aplicas as mesmas regras CSS para multiplos seletores diferentes. Para isso, podemon separar os seletores utilizando uma virgula (,).</p>
+            <pre>
+                <p>Exemplo:</p>
+                <code>
+                    .agrupando-seletores h1, .agrupando-seletores p {
+                        color:blueviolet
+                    }
+                </code>
+            </pre>
+        </fieldset>
+        <fieldset class="combinador-descendente">
+            <h1>Combinador Descendente</h1>
+            <p>Para selecionar elementos descendentes, podemos utilizar as seguintes relações entre dois seletores: </p>
+            <ol>
+                <li><strong>Combinador Descendente (espaço)</strong></li>
+                <li><strong>Combinado filho (>)</strong></li>
+                <li><strong>Combinador irmão adjacente (+)</strong></li>
+                <li><strong>Combinador irmão em geral (~)</strong></li>
+            </ol>
+            <p>Ficaria:</p>
+            <code>[SELETOR][COMBINADOR][SELETOR]</code>
+            <br>
+            <h2>Exemplo:</h2>
+            <ul>
+                <li class="fundo-verde" id="item-01">
+                    <div>Item 1</div>
+                    <ul id="sublista-01">
+                        <li>Subitem A</li>
+                        <li>Subitem B</li>
+                    </ul>
+                </li>
+                <li class="fundo-verde" id="item-02">
+                    <div>Item 2</div>
+                    <ul id="sublista-02">
+                        <li>Subitem A</li>
+                        <li>Subitem B</li>
+                    </ul>
+                </li>
+                <li class="fundo-verde" id="item-03">
+                    <div>Item 3</div>
+                    <ul id="sublista-03">
+                        <li>Subitem A</li>
+                        <li>Subitem B</li>
+                    </ul>
+                </ul>
+            </li>
+        </fieldset>
+
+    </div>
+</body>
+
+</html>

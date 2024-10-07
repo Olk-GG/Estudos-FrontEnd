@@ -1,0 +1,69 @@
+fieldset{
+    margin: 10px 0px 0px 0px;
+}
+
+
+
+/* Aula 1 Seletores*/
+pre {
+    background-color: rgba(128, 128, 128, 0.2);
+    margin-left: 0px;
+    padding-left: 0px;
+}
+pre p{
+    color: blue;
+    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+code{
+    color: red;
+    margin: 0;
+}
+
+[title] {
+    color: gray;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+hr{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Aula 2 Combinadores*/
+
+.agrupando-seletores h1, .agrupando-seletores p {
+    color:blueviolet
+}
+
+/* Aula 3 Combinador descendente*/
+
+.combinador-descendente code {
+    background-color:  rgba(128, 128, 128, 0.2);
+    font-style: italic;
+    color: black;
+}
+
+#item-01, #item-02, #item-03 {
+    color:crimson;
+}
+
+.fundo-verde > ul li {
+    color: rgb(0, 0, 0);
+}
+
+#item-01 li {
+    background-color: aquamarine;
+}
+
+.fundo-verde li{
+    background-color: lightgreen;
+}
+
+#sublista-03 li{
+    color: royalblue;
+}
