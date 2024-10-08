@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="largura-altura">
+            <h1 class="title">Propiedades básicas do CSS</h1>
+            <fieldset>
+                <legend> <mark> Altura e Largura</mark> </legend>
+                <ul>
+                    <li><strong>width:</strong> largura</li>
+                    <li><strong>height:</strong> altura</li>
+                    <li><strong>initial:</strong> valor inicial (default)</li>
+                    <li><strong>auto:</strong> valor automático</li>
+                    <li><strong>inherit:</strong> valor herdado do elemento pai</li>
+                </ul>
+                <pre>
+                    <p>exemplo:</p>
+                    <code>
+                        .exemplo{
+                            width: inherit;
+                            height: 200px;
+                        }
+                    </code>
+                </pre>
+            </fieldset>
+        </div>
+        <div class="max-min">
+            <fieldset>
+                <legend> <mark> Max e Min</mark> </legend>
+                <ul>
+                    <li><strong>max e min:</strong> define o minimo e o maximo de um elemento</li>
+                    <li><strong>max-width:</strong> largura maxima</li>
+                    <li><strong>max-height:</strong> altura maxima</li>
+                    <li><strong>min-width:</strong> largura minima</li>
+                    <li><strong>min-height:</strong> altura minima</li>
+                </ul>
+
+                <pre>
+                    <p>exemplo:</p>
+                    <code>
+                        .exemplo{
+                            max-width: 600px;
+                            max-height: 600px;
+                            min-width: 200px;
+                            min-height: 200px;
+                        }
+                    </code>
+                </pre>
+            </fieldset>
+        </div>
+        <div class="margin">
+            <fieldset>
+                <legend> <mark> Margin</mark> </legend>
+                <ul>
+                    <li><strong>margin:</strong> Valor aplicado a todos os lados</li>
+                    <!--Para memorizar, a ordem segue o sentido horário (ex: cima, direita, baixo, esquerda)-->
+                    <ul>
+                        <li><mark>Dois valores:</mark> Aplica cima e baixo </li>
+                        <li><mark>Três valores:</mark> Aplica cima, lado e baixo </li>
+                        <li><mark>Quatro valores:</mark> Aplica cima, direita, baixo e esquerda </li>
+                    </ul>
+                    <li><strong>margin-top:</strong> margem superior</li>
+                    <li><strong>margin-left:</strong> margem esquerda</li>
+                    <li><strong>margin-right:</strong> margem direita</li>
+                    <li><strong>margin-bottom:</strong> margem inferior</li>
+                </ul>
+                <pre>
+                    <p>exemplo:</p>
+                    <code>
+                        .exemplo{
+                            margin: 10px, 10px, 10px, 10px;
+                            margin-top: 20px;
+                            margin-right: 30px;
+                            margin-bottom: 40px;
+                            margin-left: 50px;
+                        }
+
+                        <p style="color: grey;">// utilizando auto pode-se centralizar seu elemento: </p>
+                        margin: 10px auto;
+                    </code>
+                </pre>
+            </fieldset>
+        </div>
+        <div class="padding">
+            <fieldset>
+                <legend> <mark> Padding</mark> </legend>
+                <p>O padding assim como margin, pode ser aplicado a todos os lados, o difetencial dos dois é: <br> <br>
+                    padding separa os elementos inernos; <br>
+                    margin separa os elementos externos.
+                </p>
+                <ul>
+                    <li><strong>padding:</strong> Valor aplicado a todos os lados</li>
+                    <!--Para memorizar, a ordem segue o sentido horário (ex: cima, direita, baixo, esquerda)-->
+                    <ul>
+                        <li><mark>Dois valores:</mark> Aplica cima e baixo </li>
+                        <li><mark>Três valores:</mark> Aplica cima, lado e baixo </li>
+                        <li><mark>Quatro valores:</mark> Aplica cima, direita, baixo e esquerda </li>
+                    </ul>
+                    <li><strong>padding-top:</strong> padding superior</li>
+                    <li><strong>padding-left:</strong> padding esquerda</li>
+            </fieldset>
+        </div>
+        <div class="box-sizing">
+            <fieldset>
+                <legend> <mark> Box sizing</mark> </legend>
+                <p>Quando falamos de box sizing, estamos falando de como o navegador vai renderizar nosso elemento. Para isso devemos ficar atento ao tamanho que atribuimos ao elemento.</p>
+                <p>Pois o tamnho do elemento é calculado da seguinte forma: <br>
+                    tamanho = valor (height x width) + border + padding</p>
+                <ul>
+                    <li><strong>box-sizing:</strong> Define como o navegador vai redimensionar o elemento </li>
+                    <li><strong>content-box:</strong> Ele soma os valores definidos, como no exemplo a cima </li>
+                    <li><strong>border-box:</strong> Redimensiona o padding e o border para se adequar ao height e width definidos.</li>
+                </ul>
+                <pre>
+                    <code>
+                        <p>exemplo</p>
+                        .exemplo{
+                            box-sizing: border-box;
+                            box-sizing: content-box;
+                        }
+                    </code>
+                </pre>
+            </fieldset>
+
+        </div>
+    </main>
+</body>
+
+</html>

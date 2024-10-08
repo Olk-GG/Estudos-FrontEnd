@@ -1,0 +1,43 @@
+.container{
+    width: auto;
+    height: auto;
+    background-color: royalblue;
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid black;  
+}
+
+.title{
+    color: white;
+}
+
+mark{
+    background-color: greenyellow;
+}
+
+fieldset {
+    background-color:aliceblue;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+/* Parte sobre exemplos*/
+code{
+    color: red;
+    margin: 0;
+}
+
+pre {
+    background-color: rgba(128, 128, 128, 0.2);
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+pre p{
+    color: blue;
+   margin-left: 50px;
+   margin-bottom: 0px;
+
+}
