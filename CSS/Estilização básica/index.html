@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização Básica</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <main>
+        <img src="./assets/images/para-baixo.png" alt="Ir para o Final" class="floating-button" id="scrollToBottom">
+        <script src="script.js"></script>
+
+        <h1>Estilização Básica</h1>
+        <fieldset><!--Cores-->
+            <legend>Cores</legend>
+            <p>Temos diversas formas de representar as cores dentro do css, dentre elas temos:</p>
+            <ul>
+                <li>Cores pré-definidas</li>
+                <li>Hexadecimais</li>
+                <li>RGB e RGBA</li>
+                <li>HSL e HSLA</li>
+            </ul>
+            <P>A letra "A" no RGBA e HSLA representam a opacidade</P>
+            <h3>HSL e HSLA</h3>
+            <p>hsl (hue, saturarion, lightness)</p>
+            <ul>
+                <li><strong>Hue (matiz):</strong> é o grau na roda de cores de (0 a 360).
+                    <ul>
+                        <li>0 ou 360 é vermelho.</li>
+                        <li>120 é verde.</li>
+                        <li>240 é azul.</li>
+                    </ul>
+                </li>
+                <li><strong>Saturarion (saturação):</strong> é o grau de saturação (0 a 100), em uma escala de
+                    porcentagem.
+                    <ul>
+                        <li>0% totalmente cinza.</li>
+                        <li>100% cor total.</li>
+                    </ul>
+                </li>
+                <li><strong>Lightness (luminosidade):</strong> representa a intensidade da cor.
+                    <ul>
+                        <li>0% totalmente preta.</li>
+                        <li>100% cor total.</li>
+                    </ul>
+                </li>
+            </ul>
+            <pre>
+                <p>exemplos:</p>
+                <code>
+                    <p>pré-definidas</p>
+                    .exemplo{
+                        color: blue;
+                    }
+                </code>
+                <code>
+                    <p>hexadecimais - Sem e com opacidade</p>
+                    .exemplo {
+                        color: #0000ff; 
+                        color: #0000ff80; 
+                    }
+                </code>
+                <code>
+                    <p>RGB e RGBA</p>
+                    .exemplo {
+                        color: rgb(0, 0, 255); 
+                        color: rgba(0, 0, 255, 0.5); 
+                    }
+                </code>
+                <code>
+                    <p>HSL e HSLA</p>
+                    .exemplo {
+                        color: hsl(240, 100%, 50%); 
+                        color: hsla(240, 100%, 50%, 0.5); 
+                    }
+                </code>
+            </pre>
+        </fieldset>
+        <fieldset> <!--Imagens e vídeos-->
+            <legend>Imagens e vídeos</legend>
+            <h3>Propiedade object-fit</h3>
+            <p>A propiedade object-fit serve para controlar o comportamento da imagem.</p>
+            <p>Exemplo:</p>
+
+            <div class="containerfundos">
+                <div class="box">
+                    <code style="color: black;"> object-fit:fill; (padrão)</code>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw5JRBqrwiDIDd3ZUlG-Q6vqVLBTdOh6w-A&s"
+                        alt="" id="fill">
+                </div>
+                <div class="box">
+                    <code style="color: black;"> object-fit:contain;</code>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw5JRBqrwiDIDd3ZUlG-Q6vqVLBTdOh6w-A&s"
+                        alt="" id="contain">
+                </div>
+                <div class="box">
+                    <code style="color: black;"> object-fit:cover;</code>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw5JRBqrwiDIDd3ZUlG-Q6vqVLBTdOh6w-A&s"
+                        alt="" id="cover">
+                </div>
+                <div class="box">
+                    <code style="color: black;"> object-fit:none;</code>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw5JRBqrwiDIDd3ZUlG-Q6vqVLBTdOh6w-A&s"
+                        alt="" id="none">
+                </div>
+                <div class="box">
+                    <code style="color: black;"> object-fit:scale-down;</code>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw5JRBqrwiDIDd3ZUlG-Q6vqVLBTdOh6w-A&s"
+                        alt="" id="scale-down">
+                </div>
+            </div>
+            <br>
+            <p><strong>Fill -</strong> preenche todo o espaco disponivel.</p>
+            <p><strong>Contain -</strong> preenche todo o espaco disponivel, mantendo a proporcao.</p>
+            <p><strong>Cover -</strong> preenche todo o espaço disponivel, ampliando a imagem.</p>
+            <p><strong>None -</strong> matem a proporção da imagem.</p>
+            <p><strong>Scale-down -</strong>a imagem será reduzida para a menor versão de none ou contain.</p>
+
+            <br>
+            <h3>Propiedade object-position</h3>
+            <p>A propiedade object-position serve para controlar a posicao da imagem.</p>
+            <p>Exemplo: </p>
+            <code>foram utilizados as propiedades object-fit:scale-down;</code>
+            <div class="containerfundos">
+                <div class="box">
+                    <code style="color: black;">object-position:top;</code>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw5JRBqrwiDIDd3ZUlG-Q6vqVLBTdOh6w-A&s"
+                        alt="" id="top">
+                </div>
+                <div class="box">
+                    <code style="color: black;">object-position:bottom;</code>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKw5JRBqrwiDIDd3ZUlG-Q6vqVLBTdOh6w-A&s"
+                        alt="" id="bottom">
+                </div>
+            </div>
+
+            <p><strong>Top -</strong> posiciona a imagem no topo.</p>
+            <p><strong>Bottom -</strong> posiciona a imagem no final.</p>
+            <p><strong>Left -</strong> posiciona a imagem na esquerda.</p>
+            <p><strong>Right -</strong> posiciona a imagem na direita.</p>
+            <p><strong>Center -</strong> posiciona a imagem no centro.</p>
+            <p><strong>Duas coordenadas-</strong> por exemplo: <code>object-position: top left;</code></p>
+            <p><strong>Porcentagem-</strong> pode-se utilizar uma porcentagem para definir a posição da imagem.
+                <br> Exemplo: <code>object-position: 50% 50%;</code> (50% da largura e 50% da altura)
+            </p>
+        </fieldset>
+        <fieldset><!--Fundo dos elementos-->
+            <legend>Fundo dos elementos</legend>
+            <h3>Alterando o fundo dos elementos</h3>
+            <p>A propiedade <strong>background</strong> é a tag principal para alterar fundos.</p>
+            <p>Podemos utilizar a propiedade <strong>background-color</strong> para alterar a cor de fundo dos
+                elementos.</p>
+            <p>Podemos utilizar a propiedade <strong>background-image</strong> para alterar o fundo dos elementos.</p>
+            <p>Podemos utilizar a propiedade <strong>background-size</strong> para alterar o tamanho do fundo.</p>
+            <p>Exemplos: </p>
+            <div class="containerfundos">
+                <div>
+                    <code>background-color: purple;</code>
+                    <div class="fundo" id="c1">
+                    </div>
+                </div>
+                <div>
+                    <code>background-image: radial-gradient</code>
+                    <div class="fundo" id="c2">
+                    </div>
+                </div>
+                <div>
+                    <code>background-image: linear-gradient;</code>
+                    <div class="fundo" id="c3">
+                    </div>
+                </div>
+                <div>
+                    <code>background-image: url(link);</code>
+                    <div class="fundo" id="c4">
+                    </div>
+                </div>
+                <div>
+                    <code>background-image: repeating-linear-gradient;</code>
+                    <div class="fundo" id="c5">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h3>Redimensionando as Imagens de Fundo dos Elementos</h3>
+            <p>Podemos utilizar a propiedade <strong>background-size</strong> para redimensionar as imagens de fundo dos
+                elementos.</p>
+            <p><strong>auto;</strong> - Define o tamanho da imagem de fundo automaticamente.</p>
+            <p><strong>cover;</strong> - Aumenta o tamanho da imagem de fundo para cobrir o elemento.</p>
+            <p><strong>contain</strong> - Mantem a proporção da imagem de fundo e reduz o tamanho da imagem de fundo
+                para caber no elemento. Pode começar a se repetir dependendo do tamanho da imagem e elemento. </p>
+            <p><strong>camada 1, camada 2; (contain, auto)</strong> - Sempre que utilizar camadas defina o png como a
+                primeira camada.</p>
+            <p>Exemplo: <code> background-image: url (link), url (link); </code> </p>
+            <br>
+            <div class="containerfundos">
+                <div class="base-box">
+                    <code>background-size: auto;</code>
+                    <div class="fundo-size" id="auto"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-size: cover;</code>
+                    <div class="fundo-size" id="cover"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-size: contain;</code>
+                    <div class="fundo-size" id="contain"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-size: "valor"; (150px 150px)</code>
+                    <div class="fundo-size" id="valor"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-size: "camada 1, camada 2"; </code>
+                    <div class="fundo-size" id="camada"></div>
+                </div>
+            </div>
+            <br>
+            <h3>Repetição das Imagens de Fundo</h3>
+            <p>Para alterar a repetição das imagens de fundo, utiliza-se a propiedade
+                <strong>background-repeat</strong>.
+            </p>
+            <p><strong>repeat;</strong> - Repetirá a imagem de fundo em todas as direções.</p>
+            <p><strong>repeat-x;</strong> - Repete a imagem de fundo apenas na horizontal.</p>
+            <p><strong>repeat-y;</strong> - Repete a imagem de fundo apenas na vertical.</p>
+            <p><strong>space;</strong> - Repetirá a imagem de fundo em todas as direções, redimensionando a imagem.
+                Gerando espaços entre as imagens para preencher o elemento.</strong></p>
+            <p><strong>round;</strong> - Repetirá a imagem de fundo em todas as direções, redimensionando a imagem para
+                preencher totalmente o elemento.</p>
+            <p><strong>no-repeat;</strong> - Não repete a imagem de fundo.</strong></p>
+            <p><strong>X e Y;</strong> - Podemos utilizar duas propiedades para alterar a repetição das imagens de
+                fundo.</p>
+            <p>Exemplo: <code><strong>background-repeat: repeat space;</strong></code> </p>
+
+            <br>
+            <div class="containerfundos">
+                <div class="base-box">
+                    <code>background-repeat: repeat;</code>
+                    <div class="fundo-repeat" id="repeat"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-repeat: repeat-x;</code>
+                    <div class="fundo-repeat" id="repeat-x"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-repeat: repeat-y;</code>
+                    <div class="fundo-repeat" id="repeat-y"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-repeat: space;</code>
+                    <div class="fundo-repeat" id="space"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-repeat: round;</code>
+                    <div class="fundo-repeat" id="round"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-repeat: no-repeat;</code>
+                    <div class="fundo-repeat" id="no-repeat"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-repeat: x y; (repeat space)</code>
+                    <div class="fundo-repeat" id="x-y"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-repeat: x y; (space repeat)</code>
+                    <div class="fundo-repeat" id="x-y2"></div>
+                </div>
+            </div>
+            <br>
+            <h3>Posicionando Imagens de Fundo</h3>
+            <p>Para posicionar as imagens de fundo, podemos utilizar as propriedades
+                <strong>background-position</strong>.
+            </p>
+            <div class="containerfundos">
+                <div class="base-box">
+                    <code>background-position: top;</code>
+                    <div class="fundo-position" id="top"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-position: bottom;</code>
+                    <div class="fundo-position" id="bottom"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-position: left;</code>
+                    <div class="fundo-position" id="left"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-position: right;</code>
+                    <div class="fundo-position" id="right"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-position: center;</code>
+                    <div class="fundo-position" id="center"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-position: "x y" (bottom right);</code>
+                    <div class="fundo-position" id="duas-coordenadas"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-position: "x y" (bottom 10px right 20px);</code>
+                    <div class="fundo-position" id="duas-coordenadas2"></div>
+                </div>
+                <div class="base-box">
+                    <code>background-position: "porcentagem" (70% 70%);</code>
+                    <div class="fundo-position" id="porcentagem"></div>
+                </div>
+            </div>
+            <br>
+            <h3>Propiedade background-attachment</h3>
+            <p>A propiedade <strong>background-attachment</strong> serve para controlar o comportamento da imagem de
+                fundo.</p>
+            <p><strong>scroll;</strong> - A imagem de fundo se move quando o usuário rola a página. Porém é fixa em
+                relação ao conteudo.</p>
+            <p><strong>fixed;</strong> - A imagem de fundo fica fixa ao fundo da página.</p>
+            <p><strong>local;</strong> - A imagem de fundo fica fixa ao fundo do elemento. Rola junto com o
+                conteudo.</strong></p>
+            <p><strong>initial;</strong> - A imagem de fundo é setada com os valores padrões.</strong></p>
+            <p><strong>inherit;</strong> - A imagem de fundo terá as propiedades herdada do elemento pai.</strong></p>
+            <div class="containerfundos">
+                <div class="base-box">
+                    <code>background-attachment: scroll;</code>
+                    <div class="fundo-attachment" id="scroll">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis id, quam qui
+                        perferendis dignissimos voluptas aliquam molestias ratione minus adipisci placeat esse ea,
+                        dolores, consequuntur temporibus distinctio veniam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias tempora beatae reiciendis
+                        soluta ad alias porro excepturi quam at quas, veniam necessitatibus odio delectus ipsa
+                        repudiandae quasi. Autem, et amet.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestias laudantium, molestiae
+                        eaque sed quasi rem cupiditate doloribus iusto quidem ab quod ducimus provident, recusandae
+                        explicabo aperiam consectetur deleniti ipsam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium maiores voluptates
+                        explicabo provident enim repellendus nisi blanditiis quaerat dicta sunt, eos totam! Minima,
+                        praesentium autem. Excepturi quo officia dolore.
+                    </div>
+                </div>
+                <div class="base-box">
+                    <code>background-attachment: fixed;</code>
+                    <div class="fundo-attachment" id="fixed">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis id, quam qui
+                        perferendis dignissimos voluptas aliquam molestias ratione minus adipisci placeat esse ea,
+                        dolores, consequuntur temporibus distinctio veniam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias tempora beatae reiciendis
+                        soluta ad alias porro excepturi quam at quas, veniam necessitatibus odio delectus ipsa
+                        repudiandae quasi. Autem, et amet.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestias laudantium, molestiae
+                        eaque sed quasi rem cupiditate doloribus iusto quidem ab quod ducimus provident, recusandae
+                        explicabo aperiam consectetur deleniti ipsam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium maiores voluptates
+                        explicabo provident enim repellendus nisi blanditiis quaerat dicta sunt, eos totam! Minima,
+                        praesentium autem. Excepturi quo officia dolore.
+                    </div>
+                </div>
+                <div class="base-box">
+                    <code>background-attachment: local</code>
+                    <div class="fundo-attachment" id="local">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis id, quam qui
+                        perferendis dignissimos voluptas aliquam molestias ratione minus adipisci placeat esse ea,
+                        dolores, consequuntur temporibus distinctio veniam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias tempora beatae reiciendis
+                        soluta ad alias porro excepturi quam at quas, veniam necessitatibus odio delectus ipsa
+                        repudiandae quasi. Autem, et amet.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestias laudantium, molestiae
+                        eaque sed quasi rem cupiditate doloribus iusto quidem ab quod ducimus provident, recusandae
+                        explicabo aperiam consectetur deleniti ipsam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium maiores voluptates
+                        explicabo provident enim repellendus nisi blanditiis quaerat dicta sunt, eos totam! Minima,
+                        praesentium autem. Excepturi quo officia dolore.
+                    </div>
+                </div>
+                <div class="base-box">
+                    <code>background-attachment: initial</code>
+                    <div class="fundo-attachment" id="initial">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis id, quam qui
+                        perferendis dignissimos voluptas aliquam molestias ratione minus adipisci placeat esse ea,
+                        dolores, consequuntur temporibus distinctio veniam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias tempora beatae reiciendis
+                        soluta ad alias porro excepturi quam at quas, veniam necessitatibus odio delectus ipsa
+                        repudiandae quasi. Autem, et amet.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestias laudantium, molestiae
+                        eaque sed quasi rem cupiditate doloribus iusto quidem ab quod ducimus provident, recusandae
+                        explicabo aperiam consectetur deleniti ipsam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium maiores voluptates
+                        explicabo provident enim repellendus nisi blanditiis quaerat dicta sunt, eos totam! Minima,
+                        praesentium autem. Excepturi quo officia dolore.
+                    </div>
+                </div>
+                <div class="base-box">
+                    <code>background-attachment: inherit</code>
+                    <div class="fundo-attachment" id="inherit">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed reiciendis id, quam qui
+                        perferendis dignissimos voluptas aliquam molestias ratione minus adipisci placeat esse ea,
+                        dolores, consequuntur temporibus distinctio veniam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias tempora beatae reiciendis
+                        soluta ad alias porro excepturi quam at quas, veniam necessitatibus odio delectus ipsa
+                        repudiandae quasi. Autem, et amet.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestias laudantium, molestiae
+                        eaque sed quasi rem cupiditate doloribus iusto quidem ab quod ducimus provident, recusandae
+                        explicabo aperiam consectetur deleniti ipsam.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium maiores voluptates
+                        explicabo provident enim repellendus nisi blanditiis quaerat dicta sunt, eos totam! Minima,
+                        praesentium autem. Excepturi quo officia dolore.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h3>Propiedade Background Origin</h3>
+            <p>Essa propriedade determina a partir de qual área a imagem de fundo é posicionada em relação ao elemento.
+            </p>
+            <p><strong>border-box:</strong> A imagem de fundo é posicionada em relação à borda do elemento, ou seja, a
+                imagem começa a partir da borda externa do elemento, incluindo o padding e a borda.</p>
+            <p><strong>padding-box:</strong> A imagem de fundo é posicionada em relação ao padding do elemento. Isso
+                significa que a imagem começa a partir do início do padding, excluindo a borda.</p>
+            <p><strong>content-box:</strong> A imagem de fundo é posicionada em relação ao conteúdo do elemento. Isso
+                significa que a imagem começa a partir do início do conteúdo, excluindo o padding e a borda.</p>
+            <div class="containerfundos">
+                <div class="origin-box">
+                    <code>background-origin: border-box;</code>
+                    <div class="fundo-origin" id="border-box"></div>
+                </div>
+                <div class="origin-box">
+                    <code>background-origin: padding-box;</code>
+                    <div class="fundo-origin" id="padding-box"></div>
+                </div>
+                <div class="origin-box">
+                    <code>background-origin: content-box;</code>
+                    <div class="fundo-origin" id="content-box"></div>
+                </div>
+            </div>
+            <h3>Propiedade Background Clip</h3>
+            <p>Essa propriedade é utilizada para definir até onde a imagem de fundo ou a cor de fundo de um elemento
+                deve ser exibida. Essa propriedade controla a área em que o fundo é "recortado" ou "clipped", permitindo
+                que você tenha um controle mais preciso sobre a aparência do fundo em relação ao conteúdo e à borda do
+                elemento.</p>
+            <p><strong>border-box:</strong> O fundo é exibido até a borda do elemento, incluindo o padding e a borda.
+                Este é o valor padrão.</p>
+            <p><strong>padding-box:</strong> O fundo é exibido apenas até a área de padding do elemento, excluindo a
+                borda. Isso significa que o fundo não se estende para a área da borda.</p>
+            <p><strong>content-box:</strong> O fundo é exibido apenas na área de conteúdo do elemento, excluindo tanto o
+                padding quanto a borda. Isso é útil quando você deseja que o fundo não interfira no padding ou na borda.
+            </p>
+            <p><strong>text:</strong> Permite que o fundo de um elemento seja aplicado apenas ao texto. Para que o
+                <strong>background-clip: text</strong> funcione corretamente, geralmente é necessario aplicar algumas
+                outras propriedades CSS:</p>
+            <ul>
+                <li><code>background-clip: text;</code> Isso torna a cor do texto transparente, permitindo que o fundo
+                    apareça através das letras.</li>
+                <li><code>color: transparent;</code> Isso torna a cor do texto transparente, permitindo que o fundo
+                    apareça através das letras</li>
+                <li><code>webkit-background-clip: text;</code> O prefixo -webkit- é necessário para garantir a
+                    compatibilidade com navegadores baseados em WebKit, como o Chrome e o Safari.</li>
+            </ul>
+            <div class="containerfundos">
+                <div class="clip-box">
+                    <code>background-clip: border-box;</code>
+                    <div class="fundo-clip" id="border-box"></div>
+                </div>
+                <div class="clip-box">
+                    <code>background-clip: padding-box;</code>
+                    <div class="fundo-clip" id="padding-box"></div>
+                </div>
+                <div class="clip-box">
+                    <code>background-clip: content-box;</code>
+                    <div class="fundo-clip" id="content-box"></div>
+                </div>
+                <div class="clip-box">
+                    <code>background-clip: text;</code>
+                    <div class="fundo-clip" id="text">
+                        <p>TRILHA DE CSS</p>
+                    </div>
+                </div>
+            </div>
+            <h3>Mesclagem de Background</h3>
+            <p><strong>normal:</strong> Este é o valor padrão. As camadas de fundo não se misturam; cada uma é exibida
+                separadamente.</p>
+            <p><strong>multiply:</strong> As cores das camadas de fundo são multiplicadas, resultando em uma cor mais
+                escura. Isso é útil para criar sombras e efeitos de profundidade.</p>
+            <p><strong>screen:</strong> As cores das camadas de fundo são combinadas de forma a clarear a imagem. É o
+                oposto de multiply.</p>
+            <p><strong>overlay:</strong> Combina os efeitos de multiply e screen, dependendo da cor de fundo. Cores
+                escuras são multiplicadas, enquanto cores claras são aplicadas com o efeito de screen.</p>
+            <p><strong>darken:</strong> Reduz a cor das camadas de fundo, resultando em uma cor mais escura.</p>
+            <p><strong>lighten:</strong> Aumenta a cor das camadas de fundo, resultando em uma cor mais clara.</p>
+            <p><strong>color-dodge:</strong> Combina as cores das camadas de fundo com a cor de fundo, resultando em uma
+                cor mais clara.</p>
+            <p><strong>color-burn:</strong> A cor de fundo inferior é escurecida para refletir a cor superior.</p>
+            <p><strong>hue:</strong> Mantém a luminosidade e a saturação da camada inferior, mas aplica a tonalidade da
+                camada superior.</p>
+            <p><strong>saturation:</strong> Mantém a luminosidade e a tonalidade da camada inferior, mas aplica a
+                saturação da camada superior.</p>
+            <p><strong>color:</strong> Mantém a luminosidade da camada inferior, mas aplica a tonalidade e a saturação
+                da camada superior.</p>
+            <p><strong>luminosity:</strong> Mantém a saturação e a tonalidade da camada inferior, mas aplica a
+                luminosidade da camada superior.</p>
+            <div class="containerfundos">
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: multiply</code>
+                    <div class="fundo-mesclagem" id="multiply">
+                        <p>Multiply</p>
+                        <p>Aqua</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: screen</code>
+                    <div class="fundo-mesclagem" id="screen">
+                        <p>Screen</p>
+                        <p>Aqua</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: overlay</code>
+                    <div class="fundo-mesclagem" id="overlay">
+                        <p>Overlay</p>
+                        <p>Aqua</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: darken</code>
+                    <div class="fundo-mesclagem" id="darken">
+                        <p>Darken</p>
+                        <p>Aqua</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: normal</code>
+                    <div class="fundo-mesclagem" id="normal">
+                        <p>Normal</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: lighten</code>
+                    <div class="fundo-mesclagem" id="lighten">
+                        <p>Lighten</p>
+                        <p>Aqua</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: color-dodge</code>
+                    <div class="fundo-mesclagem" id="color-dodge">
+                        <p>color-dodge</p>
+                        <p>yellowgreen</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: color-burn</code>
+                    <div class="fundo-mesclagem" id="color-burn">
+                        <p>color-burn</p>
+                        <p>yellowgreen</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: hue</code>
+                    <div class="fundo-mesclagem" id="hue">
+                        <p>hue</p>
+                        <p>yellowgreen</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: saturation</code>
+                    <div class="fundo-mesclagem" id="saturation">
+                        <p>saturation</p>
+                        <p>yellowgreen</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: color</code>
+                    <div class="fundo-mesclagem" id="color">
+                        <p>color</p>
+                        <p>yellowgreen</p>
+                    </div>
+                </div>
+                <div class="mesclagem-box">
+                    <code>background-blend-mode: luminosity</code>
+                    <div class="fundo-mesclagem" id="luminosity">
+                        <p>luminosity</p>
+                        <p>yellowgreen</p>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset><!-- Bordas -->
+            <legend>Bordas</legend>
+            <h3>Bordas</h3>
+            <p>Podemos definir as bordas dos elementos com a propiedade <strong>border</strong>.</p>
+            <ul>
+                <li><strong>border-width</strong></li>
+                <li><strong>border-style</strong></li>
+                <li><strong>border-color</strong></li>
+            </ul>
+            <p>também podemos modificar as bordas dos elementos de uma forma unica: <strong>border: width style
+                    color</strong> </p>
+            <p>Exemplo:</p>
+            <p><strong><code>border: 15px solid black</code></strong></p>
+            <div class="border-exemplo"></div>
+            <br>
+            <h3>Bordas com Imagens</h3>
+            <p>A propiedade <strong>border-image</strong> permite que você use uma imagem para criar bordas em vez de
+                usar as propriedades tradicionais de borda.</p>
+            <p>Temos as variações:</p>
+            <ul>
+                <li><strong>source:</strong> A imagem que será usada como borda. Pode ser uma URL de uma imagem ou um
+                    valor none para não usar imagem.</li>
+                <li><strong>slice:</strong> Define como a imagem deve ser dividida. Pode ser um valor em pixels ou
+                    porcentagens, ou uma combinação de ambos. O valor padrão é 100%, que significa que a imagem será
+                    usada em sua totalidade.</li>
+                <li><strong>repeat:</strong> Define como a imagem deve ser repetida. Os valores podem ser
+                    <strong>stretch, repeat, round, ou space.</strong></li>
+                <li><strong>width:</strong> Define a largura da borda. Pode ser um valor em pixels ou porcentagens. O
+                    valor padrão é medium.</li>
+                <li><strong>outset:</strong> Define a quantidade de espaço que a borda deve ocupar fora do elemento. O
+                    valor padrão é 0.</li>
+            </ul>
+            <p>Exemplos:</p>
+            <div class="containerfundos">
+                <div>
+                    <code>border-image-source: </code>
+                    <div class="base-image-box" id="source"></div>
+                </div>
+                <div>
+                    <code>border-image-source: linear-gradient</code>
+                    <div class="base-image-box" id="source2"></div>
+                </div>
+                <div>
+                    <code>border-image-slice: 115</code>
+                    <div class="base-image-box" id="slice"></div>
+                </div>
+                <div>
+                    <code>border-image-repeat: repeat</code>
+                    <div class="base-image-box" id="repeat"></div>
+                </div>
+                <div>
+                    <code>border-image-width: 10px </code>
+                    <div class="base-image-box" id="width"></div>
+                </div>
+                <div>
+                    <code>border-image-outset: 10px</code>
+                    <div class="base-image-box" id="outset"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset><!-- Fontes -->
+            <legend>Fontes</legend>
+            <div class="fontes">
+                <h3>Localizar fontes</h3>
+                <ul>
+                    <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+                </ul>
+                <h3>Fontes</h3>
+                <p>Podemos utilizar a propiedade <strong>font-family</strong> para alterar a fonte dos elementos.</p>
+                <p>Podemos utilizar a propiedade <strong>font-size</strong> para alterar o tamanho da fonte dos
+                    elementos.</p>
+                <p>Podemos utilizar a propiedade <strong>font-weight</strong> para alterar o peso da fonte dos
+                    elementos.</p>
+                <p>Podemos utilizar a propiedade <strong>font-style</strong> para alterar o estilo da fonte dos
+                    elementos (normal, <span id="oblique">oblique</span>, <span id="italic">italic</span>).</p>
+                <p>Podemos utilizar a propiedade <strong>font-variant</strong> para alterar o estilo da fonte dos
+                    elementos <span id="smallcaps">(small-caps)</span>(small-caps).</p>
+                <p>Podemos utilizar a propiedade <strong>font-stretch</strong> para alterar o estilo da fonte dos
+                    elementos (deixar mais estreito ou mais amplo).</p>
+                <p>Podemos ultilizar a propiedade <strong>line-height</strong> para alterar o espaçamento entre as
+                    linhas.</p>
+                <br>
+                <p>Exemplo: <sup>(para melhor visualização olhar o arquivo css)</sup></p>
+                <p><strong>font: Roboto</strong></p>
+                <p class="font-example1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam dolore
+                    sit minima? Quibusdam distinctio voluptates optio ullam impedit ea sit animi vero, nesciunt, sequi
+                    molestiae incidunt deleniti numquam nam.</p>
+                <p class="font-example2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quisquam aut
+                    minus nemo, veritatis sunt ipsum ducimus nobis aliquid esse, numquam reiciendis accusantium debitis
+                    quo libero atque explicabo, labore deserunt.</p>
+                <br>
+                <p>Também podemos realizar tudo isso em uma mesma propiedade:
+                    <code><b> font: font-style font-variant font-weight font-size/line-height font-family</b></code></p>
+                <p id="exemplo">font: italic small-caps bold 24px/2em 'Roboto', sans-serif</p>
+            </div>
+        </fieldset>
+        <fieldset><!-- Textos -->
+            <legend>Textos</legend>
+            <p>Para modificar o texto utiliza-se a propiedade <strong>text-</strong></p>
+            <p>Temos as seguintes propriedades:</p>
+            <ul>
+                <li><strong>text-transform</strong> - transforma o texto</li>
+                <ul>
+                    <li><strong><code>text-transform: uppercase</code></strong> - transforma o texto em maiusculas.</li>
+                    <li><strong><code>text-transform: lowercase</code></strong> - transforma o texto em minusculas.</li>
+                    <li><strong><code>text-transform: capitalize</code></strong> - transforma o texto em maiusculas na
+                        primeira letra de cada palavra.</li>
+                </ul>
+                <li><strong>text-align</strong> - alinha o texto</li>
+                <ul>
+                    <li><strong><code>text-align: left</code></strong> - alinha o texto para a esquerda.</li>
+                    <li><strong><code>text-align: right</code></strong> - alinha o texto para a direita.</li>
+                    <li><strong><code>text-align: center</code></strong> - alinha o texto para o centro.</li>
+                    <li><strong><code>text-align: justify</code></strong> - alinha o texto para o centro.</li>
+                </ul>
+                <li><strong>text-decoration</strong></li>
+                <ul>
+                    <li><strong><code>text-decoration: none</code></strong> - não define decoração no texto.</li>
+                    <li><strong><code>text-decoration: underline</code></strong> - define decoração no texto como
+                        sublinhado.</li>
+                    <li><strong><code>text-decoration: overline</code></strong> - define decoração no texto como
+                        sobrelinhado, linha acima do texto.</li>
+                    <li><strong><code>text-decoration: line-through</code></strong> - define decoração no texto como
+                        tachado.</li>
+                </ul>
+                <li><strong>text-indent</strong> - define a indentação do texto em relação ao primeiro parágrafo.</li>
+                <li><strong>text-justify</strong> - define a justificação do texto.</li>
+                <li><strong>letter-spacing</strong> - define o espaçamento entre as letras.</li>
+                <li><strong>word-spacing</strong> - define o espaçamento entre as palavras.</li>
+                <li><strong>white-space</strong> - define a forma como os espaçamentos entre as palavras se comportarão.
+                </li>
+                <ul>
+                    <li><strong><code>white-space: normal</code></strong> - define que o texto irá se comportar
+                        normalmente, não será possivel existir 2 espaçamentos entre as palavras.</li>
+                    <li><strong><code>white-space: nowrap</code></strong> - define que o texto não irá quebrar as
+                        linhas, permitindo que o texto seja exibido em uma linha.</li>
+                    <li><strong><code>white-space: pre</code></strong> - texto irá manter os espaçamentos entre as
+                        palavras, ignorando as quebras de linha e o tamaho do elemento.</li>
+                    <li><strong><code>white-space: pre-line</code></strong> - respeita a quebra de texto e o tamanho do
+                        elemento.</li>
+                    <li><strong><code>white-space: pre-wrap</code></strong> - o texto irá manter os espaçamentos entre
+                        as palavras, mas também irá quebrar as linhas.</li>
+                    <li><strong><code>white-space: break-spaces</code></strong> - ira quebrar os espaçamentos entre as
+                        palavras quando necessario, de acordo com o tamanho do elemento.</li>
+                </ul>
+                <li><strong>word-wrap</strong> - define como o texto irá quebrar as linhas, se manterá a palavra inteira
+                    ou irá quebrar as palavras.</li>
+                <ul>
+                    <li><strong><code>word-wrap: normal</code></strong> - não ira quebrar a palavra.</li>
+                    <li><strong><code>word-wrap: break-word</code></strong> - ira quebrar a palavra ao meio, quando
+                        necessario.</li>
+                </ul>
+                <li><strong>word-break</strong>- define quando o texto deve quebrar as linhas.</li>
+                <ul>
+                    <li><strong><code>word-break: normal</code></strong> - o texto irá quebrar as palavras quando
+                        necessario.</li>
+                    <li><strong><code>word-break: break-all</code></strong> - o texto irá quebrar as palavras em
+                        qualquer sílabas.</li>
+                    <li><strong><code>word-break: keep-all</code></strong> - o texto irá manter as palavras inteiras.
+                    </li>
+                </ul>
+                <li><strong>writing-mode</strong> - define a forma como o texto irá ser exibido (difine como o texto
+                    deve ser lido). </li> <br>
+                <li><strong>text-overflow</strong> funciona em conjunto com o white-space: nowrap, para que o texto não
+                    quebre em várias linhas.</li>
+                <ul>
+                    <li><strong><code>text-overflow: clip</code></strong> - O texto que não couber no elemento será
+                        cortado e não será exibido. Este é o valor padrão.</li>
+                    <li><strong><code>text-overflow: ellipsis</code></strong> - O texto que não cabe será cortado e uma
+                        reticência (...) será adicionada no final para indicar que há mais texto.</li>
+                    <li><strong><code>text-overflow: string</code></strong> - Você pode especificar uma string
+                        personalizada que será exibida no lugar do texto cortado.</li>
+                </ul>
+            </ul>
+
+        </fieldset>
+        <fieldset><!-- Shadow -->
+            <legend>Shadow</legend>
+            <p>Para adicionar uma sombra ao elemento, utiliza-se a propriedade:</p>
+            <p><strong>box-shadow: h-shadow v-shadow blur spread color</strong></p>
+            <p>exemplo:</p>
+            <div class="containerfundos">
+                <div>
+                    <p><code>box-shadow: 10px 10px 30px -5px red; </code></p>
+                    <div class="shadow-ex" id="box-shadow"></div>
+                </div>
+            </div>
+            <p>Também podemos filtrar e adicionar sombras em uma imagem.</p>
+            <p>Para isso utilizamos a propriedade:</p>
+            <p><strong>filter: drop-shadow</strong></p>
+            <p>exemplo:</p>
+            <div class="containerfundos">
+                <div>
+                    <p><code>filter: drop-shadow(10px 10px 10px red); </code></p>
+                    <img src="./assets/images/aviao.png" id="drop-shadow" alt="">
+                </div>
+            </div>
+            <p>Também podemos adicionar sombras a textos.</p>
+            <p>Para isso utilizamos a propriedade:</p>
+            <p><strong>text-shadow: h-shadow v-shadow blur color</strong></p>
+            <p>exemplo:</p>
+            <h4>Trilha de CSS</h4>
+        </fieldset>
+        <fieldset><!-- Overflow -->
+            <legend>Overflow</legend>
+            <p>A propiedade <strong>Overflow</strong> controla como o conteúdo que excede o tamanho de um elemento é tratado.</p>
+            <p>Ela possui 4 valores possíveis:</p>
+            <ul>
+                <li><strong>visible</strong> - O conteúdo excede o tamanho do elemento, ele fica visível. Este é o valor padrão.</li>
+                <li><strong>hidden</strong> - O conteúdo excede o tamanho do elemento, ele fica oculto.</li>
+                <li><strong>scroll</strong> - O conteúdo que excede o tamanho do elemento é cortado, mas barras de rolagem são adicionadas para permitir que o usuário veja o conteúdo oculto.</li>
+                <li><strong>auto</strong> - O navegador decide se deve ou não adicionar barras de rolagem, dependendo do conteúdo. Se o conteúdo exceder o tamanho do elemento, as barras de rolagem aparecerão.</li>
+            </ul>
+        </fieldset>
+
+    </main>
+
+</body>
+
+</html>

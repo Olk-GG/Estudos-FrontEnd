@@ -1,0 +1,520 @@
+main{
+    font-family: sans-serif;
+    background-color: royalblue;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 35px;
+}
+
+/*botão flutuante*/
+.floating-button {
+    border-radius: 50%;
+    position: fixed;
+    right: 45px; /* Distância da borda direita */
+    bottom: 20px;
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer; /* Cursor de ponteiro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s; /* Transição suave */
+}
+.floating-button:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+fieldset{
+    background-color: rgba(240, 248, 255, 0.9);
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding-bottom: 50px;
+    
+}
+
+ul{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    & li{
+    margin-top: 10px;
+    }
+}
+
+/* Parte sobre exemplos*/
+pre {
+    background-color: rgba(128, 128, 128, 0.2);
+    margin-left: 0px;
+    padding-left: 0px;
+    border-radius: 15px;
+    
+
+
+    & p{
+        color: #0000ff;
+        margin-left: 50px;
+        margin-bottom: 0px;
+    }
+    & .ex{
+        color: grey;
+        margin-left: 200px;
+    }
+    & code{
+        color: red;
+        margin: 0;
+    }
+    & code p{
+        color: gray;
+    }
+
+}
+mark, legend{
+    background-color: greenyellow;
+}
+
+/*imgs - object-fit e object-position*/
+.box{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    margin-bottom: 20px;
+
+    
+    & img{
+        width: 100%;
+        height: 100%;
+        border: #0000ff solid 4px;
+    }
+    
+    & #fill{
+        object-fit: fill;
+    }
+    & #contain{
+        object-fit: contain;
+    }
+    & #cover{
+        object-fit: cover;
+    }
+    & #none{
+        object-fit: none;
+    }
+    & #scale-down{
+        object-fit: scale-down;
+    }
+
+    /* object-position */
+    
+    & #top{
+        object-position: top;
+        object-fit: scale-down;
+    }
+    & #bottom{
+        object-position: bottom;
+        object-fit: scale-down;
+        
+    }
+    
+}
+
+/* fundos */
+.containerfundos{
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens que não cabem na linha atual sejam movidos para a próxima linha */
+    padding-top:15px ;
+    padding-bottom: 15px;
+}
+.fundo{
+    margin-right: 10px;
+    width: 300px;
+    height: 300px;
+    flex: 1 1 300px; /* Os itens podem crescer e encolher, com uma largura base de 300px */
+    border: solid 4px black;
+    &#c1{
+        background-color: purple;
+    }
+    &#c2{
+        background-image: radial-gradient(red, blue);
+    }
+    &#c3{
+        background-image: linear-gradient(green, greenyellow, yellow, orange, red);
+    }
+    &#c4{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ44tBd44hnhmD8_DVQOSfwr6QrRqqyWZG_fA&s);
+    }
+    &#c5{
+        background-image: repeating-linear-gradient(to top, white 0 20px, grey 20px 40px);
+    }
+    
+}
+
+/*Redimensionando e Posicionando Imagens de Fundo dos Elementos*/
+.base-box{
+    width: 300px;
+    height: 300px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    
+}
+.fundo-size{
+    width: 300px;
+    height: 300px;
+    flex: 1 1 300px; /* Os itens podem crescer e encolher, com uma largura base de 300px */
+    border: solid 4px black;
+    background-image: url(../assets/images/mountain.jpg);
+    &#auto{
+        background-size: auto;
+    }
+    &#cover{
+        background-size: cover;
+    }
+    &#contain{
+        background-size: contain;
+    }
+    &#valor{
+        background-size: 150px 150px;
+    }
+    &#camada{
+        /*ao utilizar camadas sempre coloque a imagem png na primeira camada*/
+        background-image: url(../assets/images/aviao.png), url(../assets/images/mountain.jpg);
+        background-size: cover, auto;
+    }
+}
+.fundo-repeat{
+    width: 300px;
+    height: 300px;
+    border: solid 4px black;
+    background-image: url(../assets/images/mountain.jpg);
+    background-size: 140px;
+    flex: 1 1 300px; /* Os itens podem crescer e encolher, com uma largura base de 300px */
+    &#repeat{
+        background-repeat: repeat;
+    }
+    &#repeat-x{
+        background-repeat: repeat-x;
+    }
+    &#repeat-y{
+        background-repeat: repeat-y;
+    }
+    &#space{
+        background-repeat: space;
+    }
+    &#round{
+        background-repeat: round;
+    }
+    &#no-repeat{
+        background-repeat: no-repeat;
+    }
+    &#x-y{
+        background-repeat: repeat space;
+    }
+    &#x-y2{
+        background-repeat: space repeat;
+    }
+
+}
+.fundo-position{
+    
+    width: 300px;
+    height: 300px;
+    border: solid 4px black;
+    background-image: url(../assets/images/mountain.jpg);
+    background-size: 180px;
+    background-repeat: no-repeat;
+    &#top{
+        background-position: top;
+    }
+    &#bottom{
+        background-position: bottom;
+    }
+    &#left{
+        background-position: left;
+    }
+    &#right{
+        background-position: right;
+    }
+    &#center{
+        background-position: center;
+    }
+    &#duas-coordenadas{
+        background-position: bottom right;
+    }
+    &#duas-coordenadas2{
+        background-position: bottom 10px right 20px;
+    }
+    &#porcentagem{
+        background-position: 70% 70%;
+    }
+}
+
+/*Background attachment*/
+.fundo-attachment{
+    width: 300px;
+    height:300px;
+    border: solid 4px black;
+    background-image: url(../assets/images/por-sol.jpg);
+    background-size: cover;
+    overflow:auto;
+    color: aliceblue;
+    &#scroll{
+        background-attachment: scroll;
+    }
+    &#fixed{
+        background-attachment: fixed;
+    }
+    &#local{
+        background-attachment: local;
+    }
+    &#initial{
+        background-attachment: initial;
+    }
+    &#inherit{
+        background-attachment: inherit;
+    }
+}
+
+/*Background origin*/
+.origin-box{
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-right: 20px;
+
+}
+.fundo-origin{
+    width: 300px;
+    height: 300px;
+    background-image: url(../assets/images/por-sol.jpg);
+    background-size: 100% 100%;
+    border: 8px dashed rgb(0, 0, 255);
+    background-repeat: no-repeat;
+    padding: 20px;
+    
+    &#border-box{
+        background-origin: border-box;
+    }
+    &#padding-box{
+        background-origin: padding-box;
+    }
+    &#content-box{
+        background-origin: content-box;
+    }
+
+}
+
+/*Background clip*/
+.clip-box{
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+.fundo-clip{
+    width: 300px;
+    height: 300px;
+    border: 8px dashed rgb(0, 0, 255);
+    padding: 20px;
+    
+    --s: 148px; /* controla o tamanho*/
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;  
+    background: repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
+        calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
+        repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
+    background-size: var(--s) calc(var(--s)*tan(30deg));
+    
+    &#border-box{
+        background-clip: border-box;
+    }
+    &#padding-box{
+        background-clip: padding-box;
+    }
+    &#content-box{
+        background-clip: content-box;
+    }
+    &#text{
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; 
+        font-size: 70px;
+        font-weight: 1000;
+        align-content: center;
+    }
+}
+
+/*Mesclagem de fundos*/
+.mesclagem-box{
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+.fundo-mesclagem{
+    width: 300px;
+    height: 300px;
+    border: 4px solid black;
+    padding: 20px;
+    background-image: url(https://img.freepik.com/free-vector/abstract-organic-pattern-design-background_1048-19286.jpg?t=st=1743028031~exp=1743031631~hmac=2aa265a62bb0c90e6a5195880473b6678c3b2a91217cb999654f29f8bb15a45e&w=740);
+    background-size:cover;
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 40px;
+    justify-content: center;
+    align-content: center;
+
+    &#multiply{
+        background-blend-mode: multiply;
+    }
+    &#screen{
+        background-blend-mode: screen;
+    }
+    &#overlay{
+        background-blend-mode: overlay;
+    }
+    &#darken{
+        background-blend-mode: darken;
+    }
+    &#lighten{
+        background-blend-mode: lighten;
+    }
+    &#normal{
+        background-blend-mode: normal;
+    }
+    &#color-dodge{
+        background-blend-mode: color-dodge;
+        background-color: yellowgreen;
+
+    }
+    &#color-burn{
+        background-blend-mode: color-burn;
+        background-color: yellowgreen;
+    }
+    &#hue{
+        background-blend-mode: hue;
+        background-color: yellowgreen;
+    }
+    &#saturation{
+        background-blend-mode: saturation;
+        background-color: yellowgreen;
+    }
+    &#color{
+        background-blend-mode: color;
+        background-color: yellowgreen;
+    }
+    &#luminosity{
+        background-blend-mode: luminosity;
+        background-color: yellowgreen;
+    }
+}
+
+/*Bordas*/
+.border-exemplo{
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    border: 15px solid black;
+}
+
+.base-image-box{
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    border: 30px solid;
+    border-image-source: url(../assets/images/Frame\ 1.png);
+    &#source{
+        border-image-source: url(../assets/images/Frame\ 1.png);
+    }
+    &#source2{
+        border-image-source: linear-gradient(blue, red);
+        border-image-slice: 1;
+    }   
+    &#slice{
+        border-image-slice: 115;
+
+    }
+    &#repeat{
+        border-image-slice: 92;
+        border-image-repeat: repeat;
+    }
+    &#width{
+        border-image-width:10px ;
+        border-image-repeat: repeat;
+        border-image-slice: 92;
+    }
+    &#outset{
+        border-image-width:10px ;
+        border-image-repeat: round;
+        border-image-slice: 92;
+        border-image-outset: 10px;
+        margin-top: 10px;
+    }
+
+}
+
+/*Fontes*/
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+.font-example1{
+    font-family: Roboto;
+    font-weight: normal;
+    font-style: normal;
+
+}
+.font-example2{
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+.fontes{
+
+    p{
+        #italic{
+            font-style: italic;
+        }
+        #oblique{
+            font-style: oblique;
+        }
+        #smallcaps{
+            font-variant: small-caps;
+        }
+    }
+    #exemplo{ font: italic small-caps bold 24px/2em 'Roboto', sans-serif
+    }
+}
+
+/*Sombras*/
+.shadow-ex{
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    &#box-shadow{
+        box-shadow: 10px 10px 30px -5px red;
+        margin-left: 30px;
+    }
+}
+#drop-shadow{    
+    margin-left: 30px;
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(10px 10px 10px red);
+}
+h4{
+    font-size: 24px;
+    margin-left: 30px;
+    font-weight: 900;
+    text-shadow: 10px 10px 5px red;
+}
